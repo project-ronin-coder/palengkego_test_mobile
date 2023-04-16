@@ -323,6 +323,10 @@ svg {
   #btnAccount {
     display: flex;
   }
+  
+  .search-buttons {
+    width: 100%;
+  }
 }
 
 /* 
