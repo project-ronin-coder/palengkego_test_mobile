@@ -1,0 +1,503 @@
+:root {
+  /* #region Section Color Variables */
+
+  /* Dry Goods */
+  --color-for-dry-goods: #ffca3a;
+  --color-for-dry-goods-annex: #277da1;
+  /* Grocery */
+  --color-for-grocery: #ff99cc;
+  --color-for-grocery-extension: #6a4c93;
+  /* Meat and Fish */
+  --color-for-meat-section: #ff924c;
+  --color-for-fish-section: #ff595e;
+  /* Fruits and Vegetable */
+  --color-for-fruit-section: #ffff99;
+  --color-for-vegetable-section: #ccffcc;
+  --color-for-fruit-and-vegetable: #43aa8b;
+  /* Carinderia and Processed */
+  --color-for-carinderia-section: #ccffff;
+  --color-for-processed-section: #c5ca30;
+
+  /* #endregion */
+}
+
+/* #region Prerequisites */
+*,
+:after,
+:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: block;
+}
+
+.btn-main {
+  background-color: #59bd99;
+}
+
+.btn-main:hover {
+  background-color: #fff;
+}
+
+/* #endregion */
+
+/* #region MAP STYLES */
+
+/* g {
+
+  } */
+
+#GrocerySection-Extension,
+#CarinderiaSection,
+#ProcessedFoodsSection,
+#VegetableSection,
+#FruitSection,
+#FruitsAndVegetableSection-Extension,
+#MeatSection,
+#FishSection,
+#GrocerySection,
+#DryGoodsAnnexSection-Muslim,
+#DryGoods,
+#Admin-Office {
+  stroke: #343a40;
+  stroke-width: 3;
+}
+
+.map-section:hover {
+  background-color: #3b3b3b;
+  fill: #3b3b3b;
+  cursor: pointer;
+}
+
+#Admin-Office:hover {
+  background-color: #3b3b3b;
+  fill: #3b3b3b;
+  cursor: pointer;
+}
+
+/* Adding stroke to sections */
+/* .dry-goods {
+      stroke: white;
+    } */
+
+svg {
+  width: 100%;
+  height: 100vh;
+}
+
+.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: #e0f2ec;
+}
+
+/* #region SECTION COLORS */
+
+#PalengkeGoMapContainer {
+  fill: red;
+}
+
+#DryGoods {
+  fill: var(--color-for-dry-goods);
+}
+
+#DryGoodsAnnexSection-Muslim {
+  fill: var(--color-for-dry-goods-annex);
+}
+
+#GrocerySection {
+  fill: var(--color-for-grocery);
+}
+
+#GrocerySection-Extension {
+  fill: var(--color-for-grocery-extension);
+}
+
+#MeatSection {
+  fill: var(--color-for-meat-section);
+}
+
+#FishSection {
+  fill: var(--color-for-fish-section);
+}
+
+#VegetableSection {
+  fill: var(--color-for-vegetable-section);
+}
+
+#FruitSection {
+  fill: var(--color-for-fruit-section);
+}
+
+#FruitsAndVegetableSection-Extension {
+  fill: var(--color-for-fruit-and-vegetable);
+}
+
+#CarinderiaSection {
+  fill: var(--color-for-carinderia-section);
+}
+
+#ProcessedFoodsSection {
+  fill: var(--color-for-processed-section);
+}
+
+#PARKING_AREA {
+  fill: white;
+  font-size: 36px;
+  font-family: ProductSans-Bold, Product Sans;
+  font-weight: 700;
+}
+
+#Admin-Office {
+  fill: #25ab7b;
+}
+
+#PalengkeGoMapContainer {
+  fill: #d5eee5;
+  stroke: #2ed297;
+  stroke-width: 10;
+  filter: drop-shadow(5px 5px 25px #aabfb7);
+}
+
+/* B4CBC2 */
+
+.parking-area-1 {
+  fill: #343a40;
+}
+
+.parking-area-2 {
+  fill: #343a40;
+}
+
+#SampleRoute {
+  stroke: #43aa8b;
+  stroke-width: 5;
+  /* display: none; */
+}
+
+/* 
+  ------------------------------------------------
+  ACTION BUTTONS
+  ------------------------------------------------ 
+  */
+.action-buttons {
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+}
+
+.user-icon-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #59bd99;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* 
+  ------------------------------------------------
+  SEARCH BUTTONS
+  ------------------------------------------------ 
+  */
+
+.search-buttons {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 5px;
+}
+
+#inputSearch {
+  border-radius: 0 !important;
+}
+
+.input-search {
+  width: 500px;
+}
+
+/* 
+  ------------------------------------------------
+  CONTROL BUTTONS
+  ------------------------------------------------ 
+  */
+.controls {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.controls > .btn {
+  margin-bottom: 10px;
+  background-color: #59bd99;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.controls > .btn:hover {
+  background-color: #acdecc;
+  color: black;
+  border: 2px #59bd99 solid;
+}
+
+.btn:last-child {
+  margin-bottom: 0;
+}
+
+/* 
+  ------------------------------------------------
+  NAVBAR OFFCANVAS
+  ------------------------------------------------ 
+  */
+
+#palengkegoLogo {
+  height: 50px;
+}
+
+#navbarOffcanvas {
+  width: 250px !important;
+}
+
+#navbarBody {
+  display: flex;
+  flex-direction: column;
+}
+
+#btnAccount {
+  display: none;
+}
+
+.btn-navbar {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btn-navbar:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+@media (max-width: 468px) {
+  #navbarOffcanvas {
+    height: 100% !important;
+    width: 80% !important;
+  }
+
+  .btn-group {
+    width: 100%;
+  }
+
+  .action-buttons > * {
+    display: none;
+  }
+
+  .input-search {
+    width: 100%;
+  }
+  #btnAccount {
+    display: flex;
+  }
+}
+
+/* 
+  ------------------------------------------------
+  DIRECTIONS OFFCANVAS
+  ------------------------------------------------ 
+  */
+
+/* #palengkegoLogo {
+      height: 50px;
+    } */
+
+/* #directionsOffcanvas {
+      width: 250px !important;
+    } */
+
+/* #navbarBody {
+      display: flex;
+      flex-direction: column;
+    } */
+
+/* .btn-navbar {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    } */
+
+/* .btn-navbar:hover {
+      background-color: #343a40;
+      color: white;
+    } */
+
+@media (max-width: 768px) {
+  #directionsOffcanvas,
+  #filterOffcanvas,
+  #stallsOffcanvas,
+  #accountOffcanvas,
+  #stallOwnedOffcanvas,
+  #stallNoRecordOffcanvas {
+    height: 85vh !important;
+    width: 100% !important;
+  }
+
+  /* #navbarBody {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        overflow: hidden;
+      } */
+
+  /* #navbarHeader,
+      #navbarSeparator {
+        display: none;
+      } */
+
+  /* .btn-navbar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      } */
+}
+
+/* .navbar {
+    z-index: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #ccffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      height: 50px;
+      width: 100%;
+      flex-direction: row;
+      left: 0 !important;
+      bottom: 0 !important;
+      top: initial;
+    }
+  } */
+
+/* {
+      position: fixed;
+    } */
+
+#stallsBody::-webkit-scrollbar,
+#listTab::-webkit-scrollbar,
+#listItem::-webkit-scrollbar,
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+#stallsBody {
+  overflow-y: hidden;
+  /* position: fixed; */
+}
+
+.row,
+#listItem {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.row,
+#listTab {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.list-group-item {
+  margin-bottom: 10px;
+}
+
+.bg-main {
+  background-color: #59bd99 !important;
+}
+
+.cls-1 {
+  fill: none;
+  stroke: #67e8bd;
+}
+
+.route:hover {
+  fill: #59bd99;
+  cursor: pointer;
+}
+
+.view-product {
+  cursor: pointer;
+}
+
+.view-product:hover {
+  background-color: #59bd99;
+}
+
+.fill-assigned {
+  stroke: #25ab7b;
+  stroke-width: 5;
+  fill: #000;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.user-image {
+  width: 40%;
+  border: 1px solid #59bd99;
+}
+
+.dropdown-menu {
+  width: 250px !important;
+}
+
+.dropdown-item:hover {
+  background-color: #59bd99 !important;
+}
+
+.user-account {
+  cursor: pointer;
+}
