@@ -303,7 +303,7 @@ svg {
   color: white;
 }
 
-@media (max-width: 468px) {
+@media (max-width: 768px) {
   #navbarOffcanvas {
     height: 100% !important;
     width: 80% !important;
